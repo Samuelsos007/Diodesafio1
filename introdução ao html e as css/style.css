@@ -1,0 +1,51 @@
+body {
+    background: #ccc;
+    font-family: verdana;
+    max-width: 900px;
+    margin: auto;
+}
+.phone{
+    border: 1px solid #505050;
+    border-radius: 50%;
+}
+#title, .subtitle, .post_title{
+color: rgb(151, 4, 196);
+}
+#title{
+    font-size: 40px;
+    text-transform: uppercase;
+    border : none ;
+}
+a {
+    text-decoration: line-through;
+}
+.post_title{
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 15px;
+}
+.post_content{
+    margin: 0;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    text-align: justify;
+}
+.post{
+    background: #FFF;
+    padding: 15px;
+    border: 3px solid rgb(98, 22, 150) ;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.post_image{
+    margin-bottom: 15px;
+    width: 100%;
+}
+.ul_sss{
+    list-style:none ;
+    padding-left: 15px;
+}
+.ul_sss{
+    text-decoration: none;
+}
