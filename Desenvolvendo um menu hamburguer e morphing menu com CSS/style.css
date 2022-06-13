@@ -13,8 +13,23 @@ body{
 .card{
     height: 400px;
     width: 500px;
-    border-image: url('./pexels-pixabay-358457.jpg');
+    background-image: url('./pexels-mo-11592804.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(0.5);
+    color: white;
+    transition: 0.3s;
+}
+
+.card-wapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
