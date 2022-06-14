@@ -11,7 +11,7 @@ body {
 
 .header-wrapper {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background: linear-gradient(-45deg, #050404, #2E1C2B, #4A1942, #893168);
     background-size: 400% 400%;
     display: flex;
@@ -72,7 +72,7 @@ a:hover {
 .checkbox-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
 }
 
 .checkbox {
@@ -85,7 +85,7 @@ a:hover {
     justify-content: center;
     cursor: pointer;
     z-index: 9999;
-    transition: 400ms ease-in-out 0;
+    transition: 400ms ease-in-out 0s;
 }
 
 .checkbox .trace {
@@ -94,7 +94,7 @@ a:hover {
     background-color: white;
     position: absolute;
     border-radius: 4px;
-    transition: 0.5 ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .checkbox .trace:nth-child(1) {
@@ -126,7 +126,7 @@ a:hover {
     border-radius: 50%;
     box-shadow: 0px 0px 0px 0px white;
     z-index: -1;
-    transition: 400ms ease-in-out 0;
+    transition: 400ms ease-in-out 0s;
 }
 
 .menu-items {
@@ -141,18 +141,54 @@ a:hover {
     z-index: 2;
     opacity: 0;
     visibility: hidden;
-    transition: 400ms ease-in-out 0;
+    transition: 400ms ease-in-out 0s;
 }
 
 .menu-items ul {
     list-style-type: none;
 }
 
-.menu-items ul li {
+.menu-items ul li a {
     margin: 10px 0;
     color: #2E1C2B;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 40px;
+}
+
+/* ANIMAÇÂO DO MENU*/
+
+#toggle:checked + .checkbox .trace:nth-child(1){
+    transform: rotate(45deg);
+    background-color: #2E1C2B;
+    top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2){
+    transform: translateX(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    background-color:#2E1C2B;
+    top: 48px;
+
+}
+
+#toggle:checked + .checkbox{
+    background-color: white;
+}
+
+#toggle:checked ~ .menu {
+    box-shadow:0px 0px 0px 100vmax white;
+    z-index: 1;
+}
+
+#toggle:checked ~ .menu-items{
+    visibility:visible;
+    opacity: 1;
 }
