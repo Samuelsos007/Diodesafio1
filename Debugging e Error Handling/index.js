@@ -1,14 +1,15 @@
 function validaarry(arr, num){
-    try {
-        if(!arr && !num) throw new ReferenceError("Envie os parâmetros");
-
-    if(typeof arr !== 'Object') throw new TypeError("Array precisa ser do tipo object");
+        try {
+            if (!arr && !num) throw new ReferenceError('Envie os parâmetros!');
     
-    if(typeof arr !== 'numb') throw new TypeError("Num precisa ser do tipo number");
-
-    if(arr.length !== num) throw new RangeError('Tamanho inválido!');
-
-    return arr;    
+            if (typeof arr !== 'object')
+                throw new TypeError('Envie um elemento do tipo Array!');
+    
+            if (typeof num !== 'number')
+                throw new TypeError('Envie um elemento do tipo Number!');
+    
+            if (arr.length !== num) throw new RangeError('Tamanho do array inválido!');
+            return arr;    
     } catch (e) {
         if(e instanceof ReferenceError){
             console.log("Este erro é um ReferenceError!")
@@ -26,4 +27,4 @@ function validaarry(arr, num){
 
 }
 
-console.log(validaarry([], 5));
+console.log(validaarry([1, 2, 3, 4, 5] , 5));
